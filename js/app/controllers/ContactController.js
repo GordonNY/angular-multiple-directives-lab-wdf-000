@@ -10,6 +10,19 @@ function ContactController() {
         phone: '0684059433'
     }];
 
+    
+
+    this.addContact = function () {
+        var data = {
+            name: this.name,
+            phone: this.phoneNumber
+        };
+        this.contacts.push(data);
+
+        this.name = '';
+        this.phoneNumber = '';
+    }
+
     this.removeContact = function (index) {
         this.contacts.splice(index, 1);
     }
